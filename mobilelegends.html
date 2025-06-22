@@ -5,35 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mobile Legends Diamond Rates</title>
   <style>
+    @keyframes animateBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     body {
       margin: 0;
       padding: 2rem 1rem;
       font-family: "Segoe UI", sans-serif;
       background: linear-gradient(-45deg, #0077be, #00aaff, #004466, #001f3f);
       background-size: 400% 400%;
-      animation: animateBG 12s ease infinite;
+      animation: animateBG 12s ease infinite, fadeIn 1.2s ease-out;
       color: #e0f7fa;
     }
-    @keyframes animateBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+
     .container {
       max-width: 900px;
       margin: auto;
     }
+
     .top-options {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
       margin-bottom: 2rem;
     }
+
     @media(min-width: 600px) {
       .top-options {
         flex-direction: row;
       }
     }
+
     .option-card {
       flex: 1;
       background: rgba(0, 77, 115, 0.8);
@@ -45,19 +61,23 @@
       transition: 0.3s ease;
       color: #a7e9ff;
     }
+
     .option-card:hover {
       transform: scale(1.03);
       box-shadow: 0 0 30px #00d1ffcc;
     }
+
     .option-card h2 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
       text-shadow: 0 0 5px #00d1ffbb;
     }
+
     .option-card p {
       color: #b2ebf2;
       margin-bottom: 1.2rem;
     }
+
     .option-card a {
       background: #00d1ff;
       color: #002f44;
@@ -68,10 +88,12 @@
       display: inline-block;
       transition: 0.3s ease;
     }
+
     .option-card a:hover {
       background: #4de4ff;
       box-shadow: 0 0 12px #4de4ff;
     }
+
     .card {
       background: rgba(0, 51, 77, 0.9);
       padding: 2rem;
@@ -81,19 +103,21 @@
       margin-bottom: 3rem;
       color: #a7e9ff;
     }
+
     h1 {
       text-align: center;
       color: #00d1ff;
       margin-bottom: 1rem;
       text-shadow: 0 0 10px #00d1ffaa;
     }
-    /* Rate Cards Grid */
+
     .rate-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
       margin-top: 1.5rem;
     }
+
     a.rate-card {
       background: rgba(0, 209, 255, 0.15);
       border-left: 5px solid #00d1ff;
@@ -109,21 +133,25 @@
       text-decoration: none;
       cursor: pointer;
     }
+
     a.rate-card:hover {
       background: rgba(0, 209, 255, 0.3);
       transform: scale(1.03);
       box-shadow: 0 0 16px #00d1ffcc;
       color: #002f44;
     }
+
     a.rate-card span {
       font-size: 1.4rem;
       margin-right: 0.5rem;
     }
+
     a.rate-card strong {
       color: #00d1ff;
       font-weight: 700;
       font-size: 1rem;
     }
+
     .order-btn {
       display: block;
       margin: 2rem auto 0;
@@ -141,11 +169,13 @@
       cursor: pointer;
       max-width: 220px;
     }
+
     .order-btn:hover {
       background: #4de4ff;
       transform: scale(1.05);
       box-shadow: 0 0 20px #4de4ffcc;
     }
+
     a.back {
       display: inline-block;
       margin-top: 1.5rem;
@@ -165,6 +195,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     a.back:hover {
       background-color: #00d1ff;
       color: #002f44;
@@ -178,7 +209,6 @@
 
   <div class="container">
 
-    <!-- Top subscription options -->
     <div class="top-options">
       <div class="option-card">
         <h2>🛡️ Twilight Pass</h2>
@@ -193,7 +223,6 @@
       </div>
     </div>
 
-    <!-- Diamond Rate Cards -->
     <div class="card">
       <h1>💠 Mobile Legends Diamond Rates</h1>
 
